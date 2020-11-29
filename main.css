@@ -1,0 +1,55 @@
+body
+{
+    background-color: midnightblue;
+}
+
+#gameBox
+{
+    width: 350px;
+    height: 350px;
+    background: white;
+    border: black solid 10px;
+    display: block;
+    margin: 50px auto 0 auto;
+}
+
+table
+{
+    border-collapse: collapse;
+    border-style: hidden;
+    margin: auto;
+    margin-top: 15px;
+}
+
+table td
+{
+    border: 5px solid black;
+    height: 100px;
+    width: 100px;
+}
+
+.gameTile
+{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    height: 80px;
+    width: 80px;
+}
+
+textarea
+{
+    resize: none;
+    margin-top: 25px;
+    margin-left: 165px;
+}
+
+.Xs
+{
+    content: url("media/x.png");
+}
+
+.Os
+{
+    content: url("media/o.png");
+}
