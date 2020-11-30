@@ -91,6 +91,16 @@ textarea
     content: url("media/oh.png");
 }
 
+.goodHover
+{
+    background-color: lightgreen;
+}
+
+.badHover
+{
+    background-color: orangered;
+}
+
 footer
 {
     position:fixed;

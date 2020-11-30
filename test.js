@@ -1,5 +1,31 @@
 $(document).ready(function (){
 
+    //handle mouse over animations
+    $(".gameTile").on({
+        mouseenter: function () {
+            var tile = $(this);
+            if(tile.hasClass("Os") || tile.hasClass("Xs"))
+            {
+                tile.addClass("badHover");
+            }
+            else
+            {
+                tile.addClass("goodHover");
+            }
+        },
+        mouseleave: function () {
+            var tile = $(this);
+            if(tile.hasClass("badHover"))
+            {
+                tile.removeClass("badHover");
+            }
+            else
+            {
+                tile.removeClass("goodHover");
+            }
+        }
+    });
+
     $(".gameTile").click(runGame);
     $("#output").text("Start the game by clicking on a tile!");
     //set start of game constants to track progression.
