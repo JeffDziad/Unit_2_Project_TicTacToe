@@ -42,6 +42,7 @@ textarea
     resize: none;
     margin-top: 25px;
     margin-left: 165px;
+    overflow: hidden;
 }
 
 .Xs
