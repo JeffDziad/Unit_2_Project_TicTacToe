@@ -1,9 +1,14 @@
 $(document).ready(function (){
 
     $(".gameTile").click(runGame);
+    $("#output").text("Start the game by clicking on a tile!");
     var gameStatus = 'ready';
     var tracker = 0;
     var ticks = 0;
+
+    var Xwin = 0;
+    var Owin = 0;
+
     function runGame()
     {
         console.log("runGame()");
@@ -37,6 +42,8 @@ $(document).ready(function (){
                 if(checkWin("Xs"))
                 {
                     $("#output").text("Player X won the game!\nPress Restart to play again!");
+                    Xwin += 1;
+                    $("#Xwin").text(Xwin);
                     gameStatus = 'ended';
                 }
                 else if(checkDraw())
@@ -80,6 +87,8 @@ $(document).ready(function (){
         if(checkWin("Os"))
         {
             $("#output").text("Player O won the game!\nPress Restart to play again!");
+            Owin += 1;
+            $("#Owin").text(Owin);
             gameStatus = 'ended';
         }
         else if(checkDraw())

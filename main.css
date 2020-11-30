@@ -3,6 +3,39 @@ body
     background-color: midnightblue;
 }
 
+header
+{
+    text-align: center;
+    color: navajowhite;
+    font-family: "Brush Script MT";
+}
+
+header > h1
+{
+    font-size: 100px;
+}
+
+header > h2
+{
+    font-size: 50px;
+}
+
+#O
+{
+    float: left;
+    margin-left: 120px;
+    text-align: center;
+    color: wheat;
+}
+
+#X
+{
+    float: right;
+    margin-right: 120px;
+    text-align: center;
+    color: wheat;
+}
+
 #gameBox
 {
     width: 350px;
@@ -10,7 +43,8 @@ body
     background: white;
     border: black solid 10px;
     display: block;
-    margin: 50px auto 0 auto;
+    margin: 65px auto 0 auto;
+    box-shadow: 0px 0px 61px 35px rgba(0,0,0,0.75);
 }
 
 table
@@ -41,16 +75,48 @@ textarea
 {
     resize: none;
     margin-top: 25px;
-    margin-left: 165px;
     overflow: hidden;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .Xs
 {
-    content: url("media/x.png");
+    content: url("media/ex.png");
 }
 
 .Os
 {
-    content: url("media/o.png");
+    content: url("media/oh.png");
+}
+
+footer
+{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+a:link, a:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    background-color: red;
+    box-shadow: 0px 0px 43px 35px rgba(255,0,0,1);
+}
+
+#rules
+{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    color: white;
 }
