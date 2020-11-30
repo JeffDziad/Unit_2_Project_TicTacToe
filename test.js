@@ -2,13 +2,14 @@ $(document).ready(function (){
 
     $(".gameTile").click(runGame);
     $("#output").text("Start the game by clicking on a tile!");
+    //set start of game constants to track progression.
     var gameStatus = 'ready';
     var tracker = 0;
     var ticks = 0;
-
     var Xwin = 0;
     var Owin = 0;
 
+    //check gameStatus to reset game on click
     function runGame()
     {
         console.log("runGame()");
@@ -26,6 +27,7 @@ $(document).ready(function (){
         }
     }
 
+    //first handle the humanTurn and check for win/draw.
     function turnHandler(humanTurn)
     {
         console.log("turnHandler()");
@@ -59,6 +61,7 @@ $(document).ready(function (){
         }
     }
 
+    //follow up humanTurn with computerTurn. Run until validMove is false. Check for win/draw and wait for next turn.
     function computerTurn()
     {
         console.log("computerTurn()");
@@ -74,7 +77,7 @@ $(document).ready(function (){
                 validMove = false;
                 break;
             }
-            if(ticks === 1000)
+            if(ticks === 1000) //dirty but dependable fix :)
             {
                 $("#output").text("Draw.\nPress anywhere to play again!");
                 gameStatus = 'ended';
@@ -98,6 +101,7 @@ $(document).ready(function (){
         }
     }
 
+    //check all possible winning solutions, return true if one is found.
     function checkWin(player)
     {
         console.log("checkWin()");
@@ -135,6 +139,7 @@ $(document).ready(function (){
         }
     }
 
+    //ran every turn to check for draw. when tracker is 9 and checkWin of both players is false, declare a draw.
     function checkDraw()
     {
         console.log("checkDraw()");
@@ -145,6 +150,7 @@ $(document).ready(function (){
         }
     }
 
+    //after gameStatus has been changes to 'ended', run this to reset all needed variables.
     function resetGame()
     {
         console.log("resetGame()");
